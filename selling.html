@@ -1,0 +1,522 @@
+<html>
+	<head>
+		<title>Online Shopping</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-
+		awesome.min.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<style>
+			*{
+					margin:0;
+					padding:0;
+			}
+
+			body{
+				background-color: #f1f3f4;
+				font-family: sans-serif;
+			}
+			.menu-bar{
+				width: 40%;
+				height: 57px;
+				float:right;
+			}
+			.menu-bar ul{
+				display: inline-flex;
+				float:right;
+			}
+			.menu-bar ul li{
+				border-left: 1px solid #fff;
+				list-style-type: none;
+				padding: 15px 35px;
+				text-align: center;
+				background-color: orange;
+				cursor: pointer;
+			}
+			.menu-bar ul li a{
+				font-size: 16px;
+				font-weight: bold;
+				color:#fff;
+				text-decoration: none;
+			}
+			.fa-shopping-basket{
+				margin-right: 5px;
+			}
+			@media only screen and (max-width: 980px)
+			{
+				.top-nav-bar{
+					height:118px;
+					border-bottom: 0;
+				}
+				.search-box{
+					width:100%;
+				}
+				.menu-bar{
+					width:100%;
+				}
+				.menu-bar ul{
+					margin:10px 0;
+					width:100%;
+				}
+				.menu-bar ul li{
+					height:57px;
+					width:100%;
+				}
+			}
+			/*----------------featured categories css-----------------*/
+
+			.featured-categories
+			{
+				margin: 60px 0;
+			}
+			.featured-categories img
+			{
+				width: 100%;
+				padding: 20px 0;
+				transition: 1s;
+				cursor: pointer;
+			}
+			.featured-categories img:hover
+			{
+				transform: scale(1.1);
+			}
+
+			.title-box
+			{
+				background: orange;
+				color:#fff;
+				width: 180px;
+				padding: 4px 10px;
+				height: 40px;
+				margin-bottom: 30px;
+				display: flex;
+			}
+
+			.title-box h2
+			{
+				font-size: 24px;
+			}
+
+			.title-box::after
+			{
+				content: '';
+				border-top: 40px solid orange;
+				border-right: 50px solid transparent;
+				position: absolute;
+				display: flex;
+				margin-top: -4px;
+				margin-left: 170px;
+			}
+			/*-------------product-top css-------------*/
+
+			.product-top img
+			{
+				width: 100%;
+			}
+			.overlay-right
+			{
+				display: block;
+				opacity: 0;
+				position: absolute;
+				top: 10%;
+				margin-left: 0;
+				width: 70px;
+			}
+
+			.overlay-right .fa
+			{
+				cursor: pointer;
+				background-color: #fff;
+				color: #000;
+				height: 35px;
+				width: 35px;
+				font-size: 20px;
+				padding: 7px;
+				margin-top: 5%;
+				margin-bottom: 5%;
+			}
+			.overlay-right .btn-secondary 
+			{
+				background: none !important;
+				border: none !important;
+				box-shadow: none !important;
+			}
+
+			.product-top:hover  .overlay-right
+			{
+				opacity: 1;
+				margin-left: 5%;
+				transition: 0.5s;
+			}
+
+			/*------------product-bottom css-------------*/
+
+		.product-bottom  .fa
+		{
+			color: orange;
+			font-size: 10px;
+		}
+		.product-bottom h3
+		{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.product-bottom h5
+		{
+			font-size: 15px;
+			padding-bottom: 10px;
+		}
+
+		.logo{
+			width: 50px;
+			height: 50px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="top-nav-bar">
+				<img src="shoplogo.jpg" class="logo">
+		</div>
+		<div class="menu-bar">
+				<ul>
+					<li><a href="#"><i class="fa fa-shopping-basket"></i>cart</a></li>
+					<li><a href="reg.html">login & register</a></li>
+				</ul>
+		</div>
+
+		<section class="featured-categories">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="vegetables.jpg">
+					</div>
+					<div class="col-md-4">
+						<img src="leafy.jpg">
+					</div>
+					<div class="col-md-4">
+						<img src="tools.jpeg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="on-sale">
+			<div class="container">
+				<div class="title-box">
+					<h2>On Purchase</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="tomato.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Tomatoes</h3>
+								<h5><i class="fa fa-inr"></i>60 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="brinjal.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Brinjal</h3>
+								<h5><i class="fa fa-inr"></i>30 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="potato.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Potato</h3>
+								<h5><i class="fa fa-inr"></i>30 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="carrot.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Carrot</h3>
+								<h5><i class="fa fa-inr"></i>70 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="ladyfinger.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Lady's finger</h3>
+								<h5><i class="fa fa-inr"></i>25 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="beetroot.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Beetroot</h3>
+								<h5><i class="fa fa-inr"></i>50 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="cucumber.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Cucumber</h3>
+								<h5><i class="fa fa-inr"></i>40 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="broccoli.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Broccoli</h3>
+								<h5><i class="fa fa-inr"></i>35 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="lettuce.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Lettuce</h3>
+								<h5><i class="fa fa-inr"></i>35 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="pumpkin.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Pumpkin</h3>
+								<h5><i class="fa fa-inr"></i>40 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="artichoke.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Artichoke</h3>
+								<h5><i class="fa fa-inr"></i>25 <span>/kg</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="corn.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Corn</h3>
+								<h5><i class="fa fa-inr"></i>45 <span>/kg</span></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="on-sale">
+			<div class="container">
+				<div class="title-box">
+					<h2>On Sale</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="tractor.png">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Tractor</h3>
+								<h5><i class="fa fa-inr"></i>1.5 <span>L</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="baler.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Baler</h3>
+								<h5><i class="fa fa-inr"></i>14 <span>L</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="shovel.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Shovel</h3>
+								<h5><i class="fa fa-inr"></i>300 <span>/unit</span></h5>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="product-top">
+							<img src="sprinkler.jpg">
+							<div class="overlay-right">
+								<button type="button" class="btn btn-secondary" title="Quick shop">
+									<i class="fa fa-eye"></i>
+								</button>
+								<button type="button" class="btn btn-secondary" title="Add to Wishlist">
+									<i class="fa fa-heart-o"></i>
+								</button>
+							</div>
+						</div>
+						<div class="product-bottom text-center">
+								<h3>Sprinkler</h3>
+								<h5><i class="fa fa-inr"></i>750 <span>/unit</span></h5>
+						</div>
+					</div>
+		<script>
+			function openmenu()
+			{
+				document.getElementById("side-menu").style.display="block";
+				document.getElementById("menu-button").style.display="none";
+				document.getElementById("close-button").style.display="block";
+			}
+			function closemenu()
+			{
+				document.getElementById("side-menu").style.display="none";
+				document.getElementById("menu-button").style.display="block";
+				document.getElementById("close-button").style.display="none";
+			}
+		</script>
+	</body>
+
+</html>
